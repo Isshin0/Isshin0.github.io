@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Isshin">
+    
+    <title>
+        
+            HCIA01 |
+        
+        Isshin&#39;blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Isshin&#39;blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">HCIA01</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Isshin</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-09-27 01:00:06</span>
+        <span class="mobile">2022-09-27 01:00</span>
+    </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>2.3k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>7 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>HCIA 01 数据通信网络基础</p>
+<span id="more"></span>
+
+<h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><ul>
+<li>这里说指的通信，是指借助数据通信网络进行连接通信。</li>
+<li>主要介绍通信及数据通信网络的概念，信息传递的过程，网络设备及其作用，网络类型及经典组网，网络工程和网络工程师相关概念。</li>
+</ul>
+<hr>
+<h2 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h2><ul>
+<li>区分网络通信和数据通信网络的概念</li>
+<li>描述信息传递的过程</li>
+<li>区分不同的网络设备并了解其基本作用</li>
+<li>认识不同的网络类型及拓扑类型</li>
+<li>了解网络工程与网络工程师的相关概念</li>
+</ul>
+<hr>
+<h2 id="华为设备图标简介"><a href="#华为设备图标简介" class="headerlink" title="华为设备图标简介"></a>华为设备图标简介</h2><p><img src="/images/HCIA01/%E5%8D%8E%E4%B8%BA%E8%AE%BE%E5%A4%87%E5%9B%BE%E6%A0%87%E7%AE%80%E4%BB%8B.png" alt="image"></p>
+<hr>
+<h2 id="计算机网络"><a href="#计算机网络" class="headerlink" title="计算机网络"></a>计算机网络</h2><h3 id="计算机网络-定义"><a href="#计算机网络-定义" class="headerlink" title="计算机网络 定义"></a>计算机网络 定义</h3><ul>
+<li>通过传输介质将不同地理位置上的具有独立功能的计算机进行连接，从而实现”信息的传递“和”资源的共享“。</li>
+</ul>
+<h3 id="计算机网络-分类"><a href="#计算机网络-分类" class="headerlink" title="计算机网络 分类"></a>计算机网络 分类</h3><ol>
+<li>根据客户类型：运营商（提供网络接入服务）和企业网</li>
+<li>根据覆盖范围：局域网（LAN）、城域网（MAN）、广域网（WAN）</li>
+</ol>
+<h3 id="相关基本概念"><a href="#相关基本概念" class="headerlink" title="相关基本概念"></a>相关基本概念</h3><ul>
+<li>数据载荷：应用产生的数据</li>
+<li>头部：添加在数据载荷前面的字段，用于标识接收者和发送者</li>
+<li>尾部：添加在数据载荷后面的子弹，用于检验报文的完整性</li>
+<li>报文：数据封装后的产物,报文&#x3D;头部+数据载荷+尾部</li>
+<li>封装：数据载荷添加头部和尾部形成报文的过程（打包的过程）</li>
+<li>解封装：报文去除头部和尾部，提取数据载荷的过程（拆包的过程）</li>
+<li>网关：用于实现不同网络之间的通信，配置了网关地址的设备就是网关设备，相当于不同网络通信的转接口</li>
+</ul>
+<h3 id="网络通信"><a href="#网络通信" class="headerlink" title="网络通信"></a>网络通信</h3><h4 id="网络通信基本概念"><a href="#网络通信基本概念" class="headerlink" title="网络通信基本概念"></a>网络通信基本概念</h4><ul>
+<li><p>通信，是指人与人、人与物、物与物之间通过某种媒介和行为进行的信息传递与交流。</p>
+</li>
+<li><p>网络通信，是指终端设备之间通过计算机网络进行的通信。</p>
+</li>
+<li><p>终端设备：衡量的指标主要是能够“接收”和“发送”数据。</p>
+</li>
+</ul>
+<h4 id="网络通信过程"><a href="#网络通信过程" class="headerlink" title="网络通信过程"></a>网络通信过程</h4><p><img src="/%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B.png" alt="image"></p>
+<h4 id="数据通信网络基本概念"><a href="#数据通信网络基本概念" class="headerlink" title="数据通信网络基本概念"></a>数据通信网络基本概念</h4><ul>
+<li><p>数据通信网络（Data Communication Network）</p>
+</li>
+<li><p>由路由器、交换机、防火墙、无线控制器、无线接入点、以及个人电脑、为网络打印机、服务器等设备构成的通信网络。</p>
+</li>
+<li><p>功能：数据通信网络最基本功能是实现数据互通。</p>
+</li>
+</ul>
+<hr>
+<h2 id="网络设备"><a href="#网络设备" class="headerlink" title="网络设备"></a>网络设备</h2><h3 id="交换机"><a href="#交换机" class="headerlink" title="交换机"></a>交换机</h3><ul>
+<li>分类：二层交换机和三层交换机</li>
+<li>作用：二层交换机用于终端设备接入以及数据帧转发，三层交换机除了具有二层交换机的功能之外还增加了路由功能，可以进行IP地址配置以及路由寻址。</li>
+<li>应用：常用于网络内部</li>
+</ul>
+<h3 id="路由器"><a href="#路由器" class="headerlink" title="路由器"></a>路由器</h3><ul>
+<li><p>路由器作用：用于网络层路由转发，实现不同网络之间的通信。</p>
+</li>
+<li><p>问题：有三层交换机为什么还需要有路由器？</p>
+<ol>
+<li>三层交换机依赖底层交换芯片，而路由器基于处理器和路由引擎</li>
+<li>交换机具有二层和三层功能，而路由器只具备三层功能</li>
+<li>路由器的路由转发功能性能和效率高于三层交换机</li>
+</ol>
+</li>
+<li><p>路由器 应用：常用于不同网络之间</p>
+</li>
+</ul>
+<h3 id="防火墙"><a href="#防火墙" class="headerlink" title="防火墙"></a>防火墙</h3><ul>
+<li>网络安全设备，一般部署于网络边界处，用于保护网络以及数据的安全。</li>
+<li>包括认证、加密、网络地址转换等功能。</li>
+</ul>
+<h3 id="无线设备"><a href="#无线设备" class="headerlink" title="无线设备"></a>无线设备</h3><ul>
+<li>设备：无线控制器（AC）和无线接入点（AP）</li>
+</ul>
+<p><img src="/%E6%97%A0%E7%BA%BF%E8%AE%BE%E5%A4%87.png" alt="image"></p>
+<ul>
+<li><p>AP模式：胖AP 和 瘦AP</p>
+<ol>
+<li>判断标准为是否可以进行自我管理</li>
+<li>胖AP可以自我管理，瘦AP不能自我管理</li>
+<li>每个胖AP都需要单独配置</li>
+</ol>
+</li>
+<li><p>家庭里面使用的 无线路由器  一般指的是胖AP，需要单独配置。</p>
+</li>
+<li><p>企业中则不同于家庭。企业使用的AP较多，使用AC+AP的方式，通过AC统一控制AP，更加方便。</p>
+</li>
+<li><p>无线组网模式：胖AP，瘦AP+AC</p>
+<ol>
+<li>AP数量少，就用胖AP；</li>
+<li>AP数量多，就使用瘦AP，使用AC+AP的方式。</li>
+</ol>
+</li>
+<li><p>企业级AP：胖AP模式和瘦AP模式是可以更改的。</p>
+</li>
+</ul>
+<h2 id="网络类型与网络拓扑"><a href="#网络类型与网络拓扑" class="headerlink" title="网络类型与网络拓扑"></a>网络类型与网络拓扑</h2><h3 id="网络类型"><a href="#网络类型" class="headerlink" title="网络类型"></a>网络类型</h3><ol>
+<li>根据客户类型：运营商（提供网络接入服务）和企业网。</li>
+<li>根据覆盖的范围：局域网（LAN）、城域网（MAN）、广域网（WAN）。<ol>
+<li>局域网（LAN）：5公里，内网。</li>
+<li>城域网（MAN）：现在很少使用。</li>
+<li>广域网（WAN）：范围很大，典型的广域网有Internet（因特网）。</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>教育行业中的局域网、城域网及广域网</li>
+</ul>
+<p><img src="/%E6%95%99%E8%82%B2%E8%A1%8C%E4%B8%9A%E4%B8%AD%E7%9A%84%E5%B1%80%E5%9F%9F%E7%BD%91%E3%80%81%E5%9F%8E%E5%9F%9F%E7%BD%91%E5%8F%8A%E5%B9%BF%E5%9F%9F%E7%BD%91.png" alt="image"></p>
+<p>大网包小网：局域网被包含在城域网，城域网被包含在广域网</p>
+<h3 id="网络拓扑"><a href="#网络拓扑" class="headerlink" title="网络拓扑"></a>网络拓扑</h3><ul>
+<li><p>网络拓扑（Network Topology）概念</p>
+<ol>
+<li>网络拓扑图是网络工程领域用于描述网络的物理结构和逻辑接口的架构图，需要在网络搭建前给出，是一种非常重要的网络部分。</li>
+<li>网络拓扑具体是指用传输介质（例如双绞线、光纤等）互连各种设备（例如计算机终端、路由器、交换机等）所呈现的结构化布局。</li>
+</ol>
+</li>
+<li><p>常用的拓扑图工具：  visio流程图工具、eNSP</p>
+</li>
+<li><p>按照网络的拓扑形态来划分，网络可分为星型网络、总线型网络、环形网络、树形网络、全网状网络和部分状网路。</p>
+</li>
+</ul>
+<p><img src="/%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E6%8C%89%E5%BD%A2%E6%80%81%E5%88%92%E5%88%86.png" alt="image"></p>
+<h4 id="星型网络"><a href="#星型网络" class="headerlink" title="星型网络"></a>星型网络</h4><ul>
+<li><p>将所有的设备都接入到同一个中心节点</p>
+</li>
+<li><p>优点：拓展性好！运维方便，中心节点可以进行流量监管。</p>
+</li>
+<li><p>缺点：容易出现单点故障，中心节点故障则会影响整个网络，导致网络崩溃。</p>
+</li>
+<li><p>应用场景：小型企业网、家庭网</p>
+</li>
+</ul>
+<h4 id="总线型网络"><a href="#总线型网络" class="headerlink" title="总线型网络"></a>总线型网络</h4><ul>
+<li><p>所有节点通过一条总线进行连接（早期用的同轴电缆，现在很少使用）</p>
+</li>
+<li><p>优点：扩展性好、成本低</p>
+</li>
+<li><p>缺点：</p>
+<ol>
+<li>带宽低！所有节点共用一条带宽，抢占带宽资源。</li>
+<li>冲突域问题，同一时只能是一个冲突域在使用，其他全部都不能用！</li>
+<li>总线故障，波及整个网络崩溃！</li>
+</ol>
+</li>
+<li><p>应用场景：早期网络出现，现在已被淘汰</p>
+</li>
+</ul>
+<h4 id="环形网络"><a href="#环形网络" class="headerlink" title="环形网络"></a>环形网络</h4><ul>
+<li><p>所有节点连接成一个封闭的环形</p>
+</li>
+<li><p>优点：成本低、冗余性高、单点故障不会影响整个网络</p>
+</li>
+<li><p>缺点：扩展性差，添加设备过程麻烦。</p>
+</li>
+<li><p>应用场景：早期使用，现在已淘汰</p>
+</li>
+</ul>
+<h4 id="树型网络"><a href="#树型网络" class="headerlink" title="树型网络"></a>树型网络</h4><ul>
+<li><p>层次化的星型网络</p>
+</li>
+<li><p>优点：扩展性好，运维方便</p>
+</li>
+<li><p>缺点：层次越高的节点故障时，影响的范围越大</p>
+</li>
+<li><p>应用场景：总部和分支的场景</p>
+</li>
+</ul>
+<h4 id="全网状-x2F-部分网状"><a href="#全网状-x2F-部分网状" class="headerlink" title="全网状&#x2F;部分网状"></a>全网状&#x2F;部分网状</h4><ul>
+<li><p>所有节点通过线缆两两连接</p>
+</li>
+<li><p>优点：可靠性高、冗余性高、通信效率高</p>
+</li>
+<li><p>缺点：成本高、部署和运维难度高、扩展性差，添加设备麻烦。</p>
+</li>
+<li><p>应用场景：局域网内部</p>
+</li>
+</ul>
+<h4 id="组合型网络拓扑"><a href="#组合型网络拓扑" class="headerlink" title="组合型网络拓扑"></a>组合型网络拓扑</h4><ul>
+<li><p>实际组网中多种拓扑结构的组合</p>
+</li>
+<li><p>应用场景：园区网、大型企业网等等</p>
+</li>
+</ul>
+<h2 id="企业网组网架构"><a href="#企业网组网架构" class="headerlink" title="企业网组网架构"></a>企业网组网架构</h2><p><img src="/%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%84%E7%BD%91%E6%9E%B6%E6%9E%84.png" alt="image"></p>
+<h3 id="扁平化网络"><a href="#扁平化网络" class="headerlink" title="扁平化网络"></a>扁平化网络</h3><ul>
+<li><p>组网：终端设备接入交换机，然后由交换机连接三层交换机或路由器</p>
+</li>
+<li><p>优点：部署简单、成本低、运维简单</p>
+</li>
+<li><p>缺点：容易出现单点故障，冗余性差</p>
+</li>
+<li><p>应用场景：小型企业网</p>
+</li>
+</ul>
+<h3 id="层次化网络"><a href="#层次化网络" class="headerlink" title="层次化网络"></a>层次化网络</h3><ul>
+<li><p>组网：二层组网（接入层+核心层）、三层组网（接入层+汇聚层+核心层）</p>
+</li>
+<li><p>层次功能：</p>
+<ul>
+<li>接入层：用于终端设备的接入</li>
+<li>汇聚层：用户流量的汇聚以及过滤</li>
+<li>核心层：用于数据的高速转发</li>
+</ul>
+</li>
+<li><p>优点：层次分明、冗余性高、扩展性高</p>
+</li>
+<li><p>缺点：搭建成本高、架构复杂、运维难度高</p>
+</li>
+<li><p>应用场景：中大型企业网</p>
+</li>
+</ul>
+<h2 id="网络工程师岗位"><a href="#网络工程师岗位" class="headerlink" title="网络工程师岗位"></a>网络工程师岗位</h2><ul>
+<li><p>售前工程师：技术+销售，</p>
+<ul>
+<li>何让客户选择你的方案，进而售卖其中的设备，拿提成</li>
+<li>L2&#x2F;L3售前证书</li>
+</ul>
+</li>
+<li><p>售后工程师：纯技术，交付</p>
+<ul>
+<li>几乎不直接接触客户</li>
+<li>复杂设备的上架连线接电源部署等</li>
+</ul>
+</li>
+<li><p>运维&#x2F;驻场工程师：纯技术</p>
+<ul>
+<li>对现网进行日常维护以及故障处理</li>
+<li>定位故障，对问题进行排除和修复</li>
+</ul>
+</li>
+</ul>
+<h2 id="华为认证"><a href="#华为认证" class="headerlink" title="华为认证"></a>华为认证</h2><ul>
+<li>HCIA 会用命令实现网络连接就行，不在意底层协议</li>
+<li>HCIP 对底层协议进行深入了解，对网络进行排错的能力</li>
+<li>HCIE 更加深入的学习，综合能力要求更高，独立部署和规划大型网络</li>
+</ul>
+<h2 id="Other"><a href="#Other" class="headerlink" title="Other"></a>Other</h2><ul>
+<li><p>具体的华为设备查看：<a class="link"   target="_blank" rel="noopener" href="http://www.huawei.com/cn/" >www.huawei.com/cn/<i class="fas fa-external-link-alt"></i></a></p>
+<ul>
+<li>企业-技术支持-工具专区-info-Finder-进行搜索</li>
+</ul>
+</li>
+<li><p><a class="link"   target="_blank" rel="noopener" href="https://info.support.huawei.com/info-finder/zh/enterprise/index" >info-Finder（在线工具）一站式获取产品关键信息平台-华为<i class="fas fa-external-link-alt"></i></a></p>
+</li>
+</ul>
+<p>高度 1U  4.445cm</p>
+
+        </div>
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/09/26/hexo-github-deploy-ultimate-summary/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">hexo+github deploy (ultimate summary)</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Isshin</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Objectives"><span class="nav-number">2.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8E%E4%B8%BA%E8%AE%BE%E5%A4%87%E5%9B%BE%E6%A0%87%E7%AE%80%E4%BB%8B"><span class="nav-number">3.</span> <span class="nav-text">华为设备图标简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C"><span class="nav-number">4.</span> <span class="nav-text">计算机网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%AE%9A%E4%B9%89"><span class="nav-number">4.1.</span> <span class="nav-text">计算机网络 定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C-%E5%88%86%E7%B1%BB"><span class="nav-number">4.2.</span> <span class="nav-text">计算机网络 分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B8%E5%85%B3%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">4.3.</span> <span class="nav-text">相关基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1"><span class="nav-number">4.4.</span> <span class="nav-text">网络通信</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">4.4.1.</span> <span class="nav-text">网络通信基本概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B"><span class="nav-number">4.4.2.</span> <span class="nav-text">网络通信过程</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E7%BD%91%E7%BB%9C%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">4.4.3.</span> <span class="nav-text">数据通信网络基本概念</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87"><span class="nav-number">5.</span> <span class="nav-text">网络设备</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%A4%E6%8D%A2%E6%9C%BA"><span class="nav-number">5.1.</span> <span class="nav-text">交换机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1%E5%99%A8"><span class="nav-number">5.2.</span> <span class="nav-text">路由器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-number">5.3.</span> <span class="nav-text">防火墙</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E7%BA%BF%E8%AE%BE%E5%A4%87"><span class="nav-number">5.4.</span> <span class="nav-text">无线设备</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B%E4%B8%8E%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91"><span class="nav-number">6.</span> <span class="nav-text">网络类型与网络拓扑</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E7%B1%BB%E5%9E%8B"><span class="nav-number">6.1.</span> <span class="nav-text">网络类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91"><span class="nav-number">6.2.</span> <span class="nav-text">网络拓扑</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%98%9F%E5%9E%8B%E7%BD%91%E7%BB%9C"><span class="nav-number">6.2.1.</span> <span class="nav-text">星型网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%80%BB%E7%BA%BF%E5%9E%8B%E7%BD%91%E7%BB%9C"><span class="nav-number">6.2.2.</span> <span class="nav-text">总线型网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%AF%E5%BD%A2%E7%BD%91%E7%BB%9C"><span class="nav-number">6.2.3.</span> <span class="nav-text">环形网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%91%E5%9E%8B%E7%BD%91%E7%BB%9C"><span class="nav-number">6.2.4.</span> <span class="nav-text">树型网络</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%A8%E7%BD%91%E7%8A%B6-x2F-%E9%83%A8%E5%88%86%E7%BD%91%E7%8A%B6"><span class="nav-number">6.2.5.</span> <span class="nav-text">全网状&#x2F;部分网状</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BB%84%E5%90%88%E5%9E%8B%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91"><span class="nav-number">6.2.6.</span> <span class="nav-text">组合型网络拓扑</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%84%E7%BD%91%E6%9E%B6%E6%9E%84"><span class="nav-number">7.</span> <span class="nav-text">企业网组网架构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%81%E5%B9%B3%E5%8C%96%E7%BD%91%E7%BB%9C"><span class="nav-number">7.1.</span> <span class="nav-text">扁平化网络</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B1%82%E6%AC%A1%E5%8C%96%E7%BD%91%E7%BB%9C"><span class="nav-number">7.2.</span> <span class="nav-text">层次化网络</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E5%B7%A5%E7%A8%8B%E5%B8%88%E5%B2%97%E4%BD%8D"><span class="nav-number">8.</span> <span class="nav-text">网络工程师岗位</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%8E%E4%B8%BA%E8%AE%A4%E8%AF%81"><span class="nav-number">9.</span> <span class="nav-text">华为认证</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Other"><span class="nav-number">10.</span> <span class="nav-text">Other</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
