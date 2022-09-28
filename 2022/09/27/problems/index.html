@@ -23,7 +23,7 @@
     <script id="hexo-configurations">
     let KEEP = window.KEEP || {};
     KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
-    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
     KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
   </script>
 <meta name="generator" content="Hexo 6.3.0"></head>
@@ -159,7 +159,7 @@
     
     
         <span class="article-wordcount article-meta-item">
-            <i class="fas fa-file-word"></i>&nbsp;<span>280 字</span>
+            <i class="fas fa-file-word"></i>&nbsp;<span>480 字</span>
         </span>
     
     
@@ -197,9 +197,16 @@
 </ul>
 </li>
 <li><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36408085/article/details/104323711" >Hexo+Github博客：如何折叠(显示&#x2F;隐藏)部分文字 by 神奇小海螺<i class="fas fa-external-link-alt"></i></a><ol>
-<li>HTML语法：使用 details 元素<br> <code>&lt;details&gt; &lt;summary&gt;隐藏内容标题&lt;/summary&gt; &lt;/details&gt;</code> <details><summary>details隐藏效果</summary>content</details></li>
-<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/fletchto99/hexo-sliding-spoiler" >hexo-sliding-spoiler<i class="fas fa-external-link-alt"></i></a><br> <code>&#123;% spoiler "title" %&#125;&#123;%endspoiler%&#125;</code></li>
+<li>HTML语法：使用 details 元素<br> <code>&lt;details&gt; &lt;summary&gt;隐藏内容标题&lt;/summary&gt; &lt;/details&gt;</code> <details><summary>details隐藏效果</summary>content<br/>貌似不支持markdowm语法</details></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/fletchto99/hexo-sliding-spoiler" >hexo-sliding-spoiler<i class="fas fa-external-link-alt"></i></a></li>
 </ol>
+<ul>
+<li>对于这个插件，有个小小的问题——打开网页（第一次时）会无法展开，需要刷新一次才可以展开。<ul>
+<li>这个问题暂时是不知道如何解决了（220928）。</li>
+</ul>
+</li>
+<li><code>&#123;% spoiler "title" %&#125;&#123;%endspoiler%&#125;</code></li>
+</ul>
 </li>
 </ol>
 </li>
@@ -243,6 +250,25 @@
 <li><p><a class="link"   target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45309916/article/details/108275311" >删除GitHub仓库里的一个文件夹 by 一只青木呀<i class="fas fa-external-link-alt"></i></a></p>
 </li>
 <li><p><a class="link"   target="_blank" rel="noopener" href="https://xpoet.cn/2017/10/%E5%BF%AB%E9%80%9F%E6%8E%8C%E6%8F%A1Markdown%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/" >快速掌握 Markdown 基础语法 by XPoet<i class="fas fa-external-link-alt"></i></a>（因为汉字转码问题好像只能电脑打开）</p>
+</li>
+<li><p><b>html语法相关</b></p>
+<ol>
+<li>实现换行  <code>&lt;br/&gt;</code></li>
+<li>实现文本加粗  <code>&lt;b&gt;big&lt;/b&gt;</code>，效果 <b>big</b></li>
+<li>标记（定义）一个段落 <code>&lt;p&gt;&lt;/p&gt;</code><ul>
+<li>p 元素会自动在其前后创建一些空白，浏览器会自动添加这些空间。</li>
+<li><code>&lt;p&gt;这是一个段落&lt;/p&gt;&lt;p&gt;这是两个段落&lt;/p&gt;</code></li>
+<li>效果:<ul>
+<li><p>这是一个段落</p><p>这是两个段落</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>实现文本收起&#x2F;展开 details 元素<ul>
+<li><code>&lt;details&gt;&lt;summary&gt;隐藏内容标题&lt;/summary&gt;内容&lt;/details&gt;</code></li>
+</ul>
+</li>
+</ol>
 </li>
 </ul>
 <link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
