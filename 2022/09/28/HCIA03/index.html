@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Isshin">
+    
+    <title>
+        
+            HCIA03 |
+        
+        Isshin&#39;blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Isshin&#39;blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">HCIA03</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Isshin</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-09-28 23:42:19</span>
+        <span class="mobile">2022-09-28 23:42</span>
+    </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>3.5k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>12 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>HCIA03 华为VRP系统</p>
+<span id="more"></span>
+<h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><ul>
+<li><p>通用路由平台VRP（Versatile Routing Platform）</p>
+</li>
+<li><p>是华为公司数据通信产品的<strong>通用操作系统平台</strong></p>
+</li>
+<li><p>以IP业务为核心，采用组件化的体系结构，在实现丰富功能特性的同时，还提供了基于应用的可裁剪和可扩展的功能，使得路由器和交换机的运行效率大大增加</p>
+</li>
+<li><p>熟悉VRP操作系统并且熟练掌握VRP配置是高效管理华为网络设备的必备基础</p>
+</li>
+</ul>
+<h2 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h2><ul>
+<li>了解VRP的基础知识</li>
+<li>掌握CLI界面的使用</li>
+<li>掌握命令行的基本命令</li>
+</ul>
+<h2 id="VRP发展-x2F-概述"><a href="#VRP发展-x2F-概述" class="headerlink" title="VRP发展&#x2F;概述"></a>VRP发展&#x2F;概述</h2><ul>
+<li>VRP是华为公司数据通信产品的通用操作系统平台</li>
+<li>作为华为公司从低端到核心的全系列路由器、以太网交换机、业务网关等产品的软件核心引擎</li>
+</ul>
+<details>
+<summary>VRP提供的功能</summary>
+
+<ul>
+<li>实现统一的用户界面和管理界面</li>
+<li>实现控制平面功能，并定义转发平面接口规范</li>
+<li>实现各产品转发平面与VRP控制平面之间的交互</li>
+<li>屏蔽各产品链路层对于网络层的差异</li>
+</ul>
+</details>
+</br>
+
+<ul>
+<li>当前主要使用的两个版本</li>
+<li>VRP5<ul>
+<li>用于中低端设备，一般是盒式设备</li>
+<li>组件化设计：拆分，解耦</li>
+</ul>
+</li>
+<li>VRP8：<ul>
+<li>用于高端设备，一般是框式设备支持多CPU、多框</li>
+<li>支持多CPU、多框</li>
+</ul>
+</li>
+</ul>
+<h2 id="文件系统"><a href="#文件系统" class="headerlink" title="文件系统"></a>文件系统</h2><ul>
+<li><p>用于设备中的文件管理和维护</p>
+</li>
+<li><p>系统软件（系统文件）：包含操作系统配置，是设备启动必须要有的文件</p>
+</li>
+<li><p>配置文件：用户配置操作产生的数据</p>
+</li>
+<li><p>补丁文件：用于放置补丁程序，解决系统BUG和漏洞</p>
+</li>
+<li><p>PAF文件：用于剪裁</p>
+</li>
+</ul>
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        文件系统详细
+    </div>
+    <div class='spoiler-content'>
+        <ul>
+<li>系统软件<ul>
+<li>系统软件是设备启动、运行的必备软件，为整个设备提供支撑、管理、业务等功能</li>
+<li>常见文件后缀名为：（.cc）</li>
+</ul>
+</li>
+<li>配置文件<ul>
+<li>配置文件是用户将配置命令保存的文件，作用是允许设备以指定的配置启动生效</li>
+<li>常见文件后缀名为：(.cfg, .zip , .dat)</li>
+</ul>
+</li>
+<li>补丁文件<ul>
+<li>补丁是一种与设备系统软件兼容的软件，用于解决设备系统软件少量且急需解决的问题</li>
+<li>常见文件后缀名为：(.pat)</li>
+</ul>
+</li>
+<li>PAF文件<ul>
+<li>PAF文件是根据用户对产品需要提供了一个简单有效的方式来裁剪产品的资源占用和功能特性</li>
+<li>常见文件后缀名为：(.bin)</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+
+<h2 id="存储设备"><a href="#存储设备" class="headerlink" title="存储设备"></a>存储设备</h2><ul>
+<li>用于存储在设备中的文件</li>
+</ul>
+<ol>
+<li>SDRAM：易失性随机存储器，断电后数据会丢失</li>
+<li>NVRAM：非易失性随机存储器，断电后数据不会丢失</li>
+<li>flash：系统自带，用于存储部分系统文件和配置文件，容量较小</li>
+<li>SD card：外接存储设备，用于存放配置文件、系统文件等</li>
+<li>USB：用于外接大容量存储设备的接口</li>
+</ol>
+<h2 id="设备初始化过程"><a href="#设备初始化过程" class="headerlink" title="设备初始化过程"></a>设备初始化过程</h2><ul>
+<li>设备开机时先启动底层的bootROM（开机引导程序），运行BIOS程序，</li>
+<li>然后进行硬件自检，自检完成后才开始进行硬件初始化并显示硬件参数，</li>
+<li>硬件初始化后才会运行系统软件（操作系统），操作系统启动后才会读取用户的配置文件。</li>
+</ul>
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        
+    </div>
+    <div class='spoiler-content'>
+        <ol>
+<li>BootROM：开机引导程序，只读。</li>
+<li>显示硬件相关参数</li>
+<li>运行系统软件OS</li>
+<li>OS启动后，读取用户的配置文件</li>
+<li>用户进行命令的操作</li>
+</ol>
+
+    </div>
+</div>
+
+<h2 id="VRP用户等级"><a href="#VRP用户等级" class="headerlink" title="VRP用户等级"></a>VRP用户等级</h2><ul>
+<li>0级：参观级，仅能使用9条命令</li>
+<li>1级：监控级，可以使用全部查询命令，但是无法进行配置</li>
+<li>2级：配置级，可以使用全部查询命令以及进行部分配置</li>
+<li>3-15级：管理级，可以使用全部查询命令和配置命令</li>
+</ul>
+<details>
+<summary><b>VRP-user-view</b></summary>
+
+<p><img src="/images/HCIA03/VRP-user-view.png" alt="image"></p>
+</details>
+
+<h2 id="设备管理"><a href="#设备管理" class="headerlink" title="设备管理"></a>设备管理</h2><h3 id="登录方式"><a href="#登录方式" class="headerlink" title="登录方式"></a>登录方式</h3><ul>
+<li><p>用户对设备的常见管理方式主要有 <strong>命令行方式</strong> 和 <strong>Web网管方式</strong> 两种</p>
+<ol>
+<li>web网管方式登录（http和https）</li>
+<li>命令行方式登录：本地登录（console口）和远程登录（Telnet和SSH）<br/></li>
+</ol>
+</li>
+<li><p>Web网管方式</p>
+<ul>
+<li>Web网管方式通过图形化的操作界面，实现对设备直观方便地管理与维护，但是此方式仅可实现对设备部分功能的管理与维护。</li>
+<li>Web网管方式可以通过HTTP和HTTPS方式登录设备。</li>
+</ul>
+</li>
+<li><p>命令行方式</p>
+<ul>
+<li>命令行方式需要用户使用设备提供的命令行对设备进行管理与维护，此方式可实现对设备的精细化管理，但是要求用户熟悉命令行。</li>
+<li>命令行方式可以通过Console口、Telnet或SSH方式登录设备。</li>
+</ul>
+</li>
+</ul>
+<h3 id="命令行方式-本地登录"><a href="#命令行方式-本地登录" class="headerlink" title="命令行方式 - 本地登录"></a>命令行方式 - 本地登录</h3><ul>
+<li>Console<ul>
+<li>本地登录包括：<ol>
+<li>当用户需为第一次上电的设备进行配置时，可通过Console口本地登录设备</li>
+<li>控制口（Console Port）是一种通信串行端口，由设备的主控板提供</li>
+<li>用户终端的串行端口可以与设备Console口直接连接，然后通过PUTTY工具本地登录实现对设备的本地配置</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+<details>
+<summary><b>Console设备图</b></summary>
+
+<p><img src="/images/HCIA03/Console.png" alt="image"></p>
+</details>
+
+<details>
+<summary><b>Console补充</b></summary>
+
+<ul>
+<li>使用Console线缆来连接交换机或路由器的Console口与计算机的COM口，这样就可以通过计算机通过PUTTY工具实现本地调试和维护。Console口是一种符合RS232串口标准的RJ45接口。</li>
+<li>目前大多数台式电脑提供的COM口都可以与Console口连接。笔记本电脑一般不提供COM口，需要使用USB到RS232的转换接口。</li>
+<li>Console口登录是设备默认开启开启的功能，不需要对设备做预配置。</li>
+</ul>
+</details>
+
+<h3 id="命令行方式-远程登录"><a href="#命令行方式-远程登录" class="headerlink" title="命令行方式 - 远程登录"></a>命令行方式 - 远程登录</h3><ul>
+<li><p>远程登录允许终端远程登录到任何可以充当远程登录服务器的设备，对这些网络设备进行集中的管理和维护。</p>
+<br/>
+</li>
+<li><p>如果通过SSH远程登录，连接类型为“SSH”，</p>
+<ul>
+<li>需要输入远程登录服务器的IP地址，</li>
+<li>端口号缺省为22</li>
+</ul>
+</li>
+<li><p>如果通过Telnet远程登录，连接类型为“Telnet”，</p>
+<ul>
+<li>需要输入远程登录服务器的IP地址，</li>
+<li>端口号缺省为23<br/></li>
+</ul>
+</li>
+<li><p>命令行界面</p>
+<ul>
+<li>登录成功后即进入命令行界面CLI（Command Line Interface）</li>
+<li>命令行界面是工程师与网络设备进行交互的常用工具。</li>
+</ul>
+</li>
+</ul>
+<h2 id="命令行基础"><a href="#命令行基础" class="headerlink" title="命令行基础"></a>命令行基础</h2><h3 id="命令组成"><a href="#命令组成" class="headerlink" title="命令组成"></a>命令组成</h3><p><img src="/images/HCIA03/Structure-of-commands.png" alt="image"></p>
+<ul>
+<li><p>命令字：设备需要执行的功能</p>
+</li>
+<li><p>关键字：对命令字的约束，是扩展也是补充</p>
+</li>
+<li><p>参数列表：包含参数名和参数值，是对命令字的进一步补充</p>
+</li>
+<li><p>一条命令必须要有命令字且命令字唯一，可以没有关键字和参数列表</p>
+</li>
+</ul>
+<details>
+<summary><b>example1</b></summary>
+
+<p><code>display ip interface GE0/0/0 # 查看接口信息的命令</code></p>
+<p>命令字：display<br>关键字：ip<br>参数名：interface<br>参数值：GE0&#x2F;0&#x2F;0</p>
+</details>
+
+<details>
+<summary><b>example2</b></summary>
+
+<p><code>Reboot   # 重启设备的命令</code></p>
+<p>命令字：reboot，操作命令都要用命令字，并且必须从规范的命令字集合中选取。</p>
+</details>
+
+<details>
+<summary><b>supplement</b></summary>
+
+<ul>
+<li>命令字：<strong>设备需要执行的功能</strong><ul>
+<li>规定了系统应该执行的功能，如display（查询设备状态），reboot（重启设备）等命令字。</li>
+<li>关键字：<strong>对命令字的约束，是扩展也是补充。</strong><ul>
+<li>特殊的字符构成，用于进一步约束命令，是对命令的拓展，也可用于表达命令构成逻辑而增设的补充字符串。</li>
+</ul>
+</li>
+<li>参数列表：<strong>包含参数名和参数值，是对命令字的进一步补充</strong><ul>
+<li>是对命令执行功能的进一步约束。包括一对或多对参数名和参数值</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</details>
+
+<h3 id="命令行视图"><a href="#命令行视图" class="headerlink" title="命令行视图"></a>命令行视图</h3><p><img src="/images/HCIA03/Command-view.png" alt="image"></p>
+<ol>
+<li>用户视图：<ol>
+<li>一开始登录后的视图，仅能进行简单查询和配置，使用&lt;&gt;表示</li>
+<li>用户可以完成查看运行状态和统计信息等功能</li>
+</ol>
+</li>
+<li>系统视图：<ol>
+<li>在用户视图下输入“system-view”命令进入系统视图，使用[]表示，</li>
+<li>系统视图下的配置会全局生效，使用quit或Ctrl+z返回用户视图</li>
+<li>用户可以配置系统参数以及通过该视图进入其他的功能配置视图</li>
+</ol>
+</li>
+<li>其他视图（接口&#x2F;协议视图）：<ol>
+<li>在系统视图的基础上，使用不同的命令进入接口视图或协议视图，</li>
+<li>在接口视图或协议视图下配置是局部生效（仅在接口或者协议生效）</li>
+</ol>
+</li>
+</ol>
+<h3 id="编辑命令行"><a href="#编辑命令行" class="headerlink" title="编辑命令行"></a>编辑命令行</h3><ul>
+<li>设备的命令行界面提供基本的命令行编辑功能，以下为常用的编辑功能</li>
+</ul>
+<details>
+<summary>1. 功能键</summary>
+
+<ol>
+<li>退格键Backspace：删除光标位置的前一个字符，光标左移，若已经到达命令首，则响铃告警</li>
+<li>左光标键←或&lt;Ctrl+B&gt;：光标向左移动一个字符位置，若已经到达命令首，则响铃告警</li>
+<li>右光标键→或&lt;Ctrl+F&gt;：光标向右移动一个字符位置，若已经到达命令尾，则响铃告警</li>
+</ol>
+</details>
+
+<details>
+<summary>2. 不完整关键字输入</summary>
+
+<ul>
+<li>设备支持不完整关键字输入，即在当前视图下，当输入的字符能够<strong>匹配唯一的关键字</strong>时，可以不必输入完整的关键字</li>
+</ul>
+</details>
+
+<details>
+<summary>3. Tab键的使用</summary>
+
+<ul>
+<li>如果与之匹配的关键字唯一，按下<code>&lt;Tab&gt;</code>键，系统自动补全关键字，不全后，反复按<code>&lt;Tab&gt;</code>关键字不变。</li>
+<li>如果与之匹配的关键字不唯一，反复按<code>&lt;Tab&gt;</code>键可循环显示所有以输入字符串开头的关键字。</li>
+<li>如果没有与之匹配的关键字，按Tab键后，关键字不变。</li>
+</ul>
+</details>
+
+<h3 id="使用命令在线帮助（-？）"><a href="#使用命令在线帮助（-？）" class="headerlink" title="使用命令在线帮助（ ？）"></a>使用命令在线帮助（ ？）</h3><ul>
+<li><p>用户在使用命令行时，可以使用在线帮助以获取实时帮助，从而无需记忆大量的复杂的命令。</p>
+</li>
+<li><p>命令行在线帮助可分为完全帮助和部分帮助，可通过输入<code>&lt;?&gt;</code>实现。</p>
+<br/>
+</li>
+<li><p>完全帮助</p>
+<ul>
+<li>当用户输入命令时，可以使用命令行的完全帮助获取全部关键字和参数的提示。</li>
+<li><code>&lt;Huawei&gt;?</code></li>
+</ul>
+</li>
+<li><p>部分帮助</p>
+<ul>
+<li>当用户输入命令时，如果只记得此命令关键字的开头一个或几个字符，可以使用命令行的部分帮助获取以该字符串开头的所有关键字的提示。</li>
+<li><code>&lt;Huawei&gt;d?</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="解读命令行的错误信息"><a href="#解读命令行的错误信息" class="headerlink" title="解读命令行的错误信息"></a>解读命令行的错误信息</h3><ul>
+<li>用户键入的命令，如果通过语法检查，则正确执行，否则系统将会向用户报告错误信息</li>
+</ul>
+<p><img src="/images/HCIA03/Interpreting-error-messages.png" alt="image"></p>
+<h3 id="undo命令"><a href="#undo命令" class="headerlink" title="undo命令"></a>undo命令</h3><ul>
+<li>在命令前加undo关键字，即为undo命令行。</li>
+<li>undo命令行一般用来恢复缺省情况、禁用某个功能或者删除某项配置。</li>
+</ul>
+<ol>
+<li>使用undo命令行恢复缺省情况</li>
+<li>使用undo命令禁用某个功能</li>
+<li>使用undo命令删除某项设置</li>
+</ol>
+<h3 id="基本配置命令"><a href="#基本配置命令" class="headerlink" title="基本配置命令"></a>基本配置命令</h3><h4 id="常见文件系统操作命令"><a href="#常见文件系统操作命令" class="headerlink" title="常见文件系统操作命令"></a>常见文件系统操作命令</h4><ol>
+<li>查看当前目录：<code>&lt;Huawei&gt;pwq</code></li>
+<li>显示当前目录下的文件信息：<code>&lt;Huawei&gt;dir</code></li>
+<li>查看文本文件的具体内容：<code>&lt;Huawei&gt;more</code></li>
+<li>修改用户当前界面的工具目录：<code>&lt;Huawei&gt;cd</code></li>
+<li>创建新的目录：<code>&lt;Huawei&gt;mkdir</code></li>
+<li>删除目录：<code>&lt;Huawei&gt;rmdir</code></li>
+<li>复制文件：<code>&lt;Huawei&gt;copy</code></li>
+<li>移动文件：<code>&lt;Huawei&gt;move</code></li>
+<li>重命名文件：<code>&lt;Huawei&gt;rename</code></li>
+<li>删除文件：<code>&lt;Huawei&gt;delete</code></li>
+<li>恢复删除的文件：<code>&lt;Huawei&gt;undelete</code></li>
+<li>彻底删除回收站中的文件：<code>&lt;Huawei&gt;reset recycle-bin</code></li>
+</ol>
+<h4 id="设备基本配置命令"><a href="#设备基本配置命令" class="headerlink" title="设备基本配置命令"></a>设备基本配置命令</h4><ol>
+<li>配置设备名称<br><code>[Huawei]sysname name</code></li>
+<li>设置系统时钟<br><code>[Huawei]clock timezone time-zone-name &#123;add|minus&#125; offset</code><br> 用来对本地时区信息进行设置<br><code>[Huawei]clock datetime [utc] HH:MM:SS YYYY-MM-DD</code><br> 用来设置设备当前或UTC日期的时间<br><code>[Huawei]clock daylight-saving-time</code><br> 用来设置设备的夏令时</li>
+<li>配置命令等级<br><code>[Huawei] command-privilege level level view view-name command-key</code><br> 用来设置指定视图内的命令的级别。<br> 命令级别分为参观、监控、配置、管理4个级别，分别对应标识0、1、2、3~15。</li>
+<li>配置用户通过Password方式登录设备<br><code>[Huawei]user-interface vty 0 4</code><br><code>[Huawei-ui-vty0-4]set authentication password cipher information</code><ul>
+<li>用来进入指定的用户视图并配置用户认证方式为password。</li>
+<li>系统支持的用户界面包括Console用户界面和VTY用户界面，</li>
+<li>Console界面用于本地登录，VTY界面用于远程登录。</li>
+<li>默认情况下，设备一般最多支持15个用户同时通过VTY方式访问。</li>
+</ul>
+</li>
+<li>配置用户界面参数<br><code>[Huawei] idle-timeout minutes [ seconds ]</code><br>   用来设置用户界面断开连接的超时时间。<br>   如果用户在一段时间内没有输入命令，系统将断开连接。<br>   缺省情况下，超时时间是10分钟。</li>
+<li>配置接口IP地址<br><code>[Huawei]interface interface-number</code><br><code>[Huawei-interface-number]ip address ip address</code><br>   用来给设备上的物理或逻辑接口配置IP地址。</li>
+<li>查看当前运行的配置文件<br><code>&lt;Huawei&gt;display current-configuration</code></li>
+<li>配置文件保存<br><code>&lt;Huawei&gt;save</code></li>
+<li>查看保存的配置<br><code>&lt;Huawei&gt;display saved-configuration</code></li>
+<li>清除已保存的配置<br><code>&lt;Huawei&gt;reset saved-configuration</code></li>
+<li>查看系统启动配置参数<br><code>&lt;Huawei&gt; display startup</code></li>
+<li>配置系统下次启动时使用的配置文件<br><code>&lt;Huawei&gt;startup saved-configuration configuration-file</code><br>设备升级时，可以通过此命令让设备下次启动时加载指定的配置文件</li>
+<li>配置设备重启<br><code>&lt;Huawei&gt;reboot</code></li>
+</ol>
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>VRP是华为公司具有完全自主知识产权的网络操作系统，可以运行在多种硬件平台之上</li>
+<li>VRP拥有一致的网络界面、用户界面和管理界面</li>
+<li>熟悉VRP命令行并且熟练掌握VRP配置是高效管理华为网络设备的必备基础。</li>
+</ul>
+<h2 id="The-end"><a href="#The-end" class="headerlink" title="The end"></a>The end</h2><p>2022&#x2F;09&#x2F;28 edit.</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+        </div>
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/09/28/HCIA02/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">HCIA02</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Isshin</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Objectives"><span class="nav-number">2.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRP%E5%8F%91%E5%B1%95-x2F-%E6%A6%82%E8%BF%B0"><span class="nav-number">3.</span> <span class="nav-text">VRP发展&#x2F;概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">文件系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E8%AE%BE%E5%A4%87"><span class="nav-number">5.</span> <span class="nav-text">存储设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87%E5%88%9D%E5%A7%8B%E5%8C%96%E8%BF%87%E7%A8%8B"><span class="nav-number">6.</span> <span class="nav-text">设备初始化过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#VRP%E7%94%A8%E6%88%B7%E7%AD%89%E7%BA%A7"><span class="nav-number">7.</span> <span class="nav-text">VRP用户等级</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87%E7%AE%A1%E7%90%86"><span class="nav-number">8.</span> <span class="nav-text">设备管理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%99%BB%E5%BD%95%E6%96%B9%E5%BC%8F"><span class="nav-number">8.1.</span> <span class="nav-text">登录方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F-%E6%9C%AC%E5%9C%B0%E7%99%BB%E5%BD%95"><span class="nav-number">8.2.</span> <span class="nav-text">命令行方式 - 本地登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%96%B9%E5%BC%8F-%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95"><span class="nav-number">8.3.</span> <span class="nav-text">命令行方式 - 远程登录</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%9F%BA%E7%A1%80"><span class="nav-number">9.</span> <span class="nav-text">命令行基础</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E7%BB%84%E6%88%90"><span class="nav-number">9.1.</span> <span class="nav-text">命令组成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C%E8%A7%86%E5%9B%BE"><span class="nav-number">9.2.</span> <span class="nav-text">命令行视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="nav-number">9.3.</span> <span class="nav-text">编辑命令行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E5%9C%A8%E7%BA%BF%E5%B8%AE%E5%8A%A9%EF%BC%88-%EF%BC%9F%EF%BC%89"><span class="nav-number">9.4.</span> <span class="nav-text">使用命令在线帮助（ ？）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E8%AF%BB%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E9%94%99%E8%AF%AF%E4%BF%A1%E6%81%AF"><span class="nav-number">9.5.</span> <span class="nav-text">解读命令行的错误信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#undo%E5%91%BD%E4%BB%A4"><span class="nav-number">9.6.</span> <span class="nav-text">undo命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="nav-number">9.7.</span> <span class="nav-text">基本配置命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F%E6%93%8D%E4%BD%9C%E5%91%BD%E4%BB%A4"><span class="nav-number">9.7.1.</span> <span class="nav-text">常见文件系统操作命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AE%BE%E5%A4%87%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E5%91%BD%E4%BB%A4"><span class="nav-number">9.7.2.</span> <span class="nav-text">设备基本配置命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">10.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-end"><span class="nav-number">11.</span> <span class="nav-text">The end</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
