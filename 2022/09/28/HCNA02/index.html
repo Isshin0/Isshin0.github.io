@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Isshin">
+    
+    <title>
+        
+            HCNA02 |
+        
+        Isshin&#39;blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"mac"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Isshin&#39;blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">HCNA02</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Isshin</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-09-28 14:38:06</span>
+        <span class="mobile">2022-09-28 14:38</span>
+    </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>3.7k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>14 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><ul>
+<li>什么是数据？数据又是如何进行传输传递的？<span id="more"></span></li>
+</ul>
+<h2 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h2><ul>
+<li>理解数据的定义和传递过程</li>
+<li>理解网络参考模型概念</li>
+<li>了解常见的标准协议</li>
+<li>掌握数据封装及解封装过程</li>
+</ul>
+<h2 id="应用和数据"><a href="#应用和数据" class="headerlink" title="应用和数据"></a>应用和数据</h2><ol>
+<li><p>应用</p>
+<ul>
+<li>应用的存在是为了满足人们的各种需求，比如访问网页，在线游戏，在线视频等。</li>
+<li>不同的应用自然会产生不同类型的数据信息，比如文本，图片，视频等。</li>
+</ul>
+</li>
+<li><p>数据</p>
+<ul>
+<li>数据的产生： 在计算机领域中，数据是各种信息的载体。</li>
+<li>数据传输：应用程序产生的数据要在不同的设备之间传递。</li>
+</ul>
+</li>
+</ol>
+<h2 id="参考模型"><a href="#参考模型" class="headerlink" title="参考模型"></a>参考模型</h2><h3 id="OSI七层模式"><a href="#OSI七层模式" class="headerlink" title="OSI七层模式"></a>OSI七层模式</h3><ol>
+<li>作用：定义、规范数据的传输</li>
+<li>层次作用：<ol start="7">
+<li>应用层：为应用程序提供接口</li>
+<li>表示层：用于数据格式转换，确保对端设备应用层可以识别数据，包括编码、解码、加密、解密、压缩、解压缩等</li>
+<li>会话层：用于管理、维护和终止会话</li>
+<li>传输层：提供端到端可靠或不可靠的传输，分为tcp连接和udp连接</li>
+<li>网络层：定义逻辑地址（IP地址），维护路由表，基于路由表项指导数据从源地址到目的地址的转发</li>
+<li>数据链路层：将数据封装成帧，使用MAC地址进行通信</li>
+<li>物理层：将数据转换为比特流（0和1组成），然后通过传输介质进行传输</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>OSI七层模型——参考模型- 权威参考</li>
+<li>TCP&#x2F;IP标准模型（4层）- 实际使用</li>
+<li>TCP&#x2F;IP对等模型（5层) - 用于学习型</li>
+</ul>
+<p><img src="/images/HCIA02/Reference_Model.png" alt="image"></p>
+<p>后续学习的过程中，提到的TCP&#x2F;IP模型都是指TCP&#x2F;IP对等模型（5层）</p>
+<h3 id="TCP-x2F-IP-常见协议"><a href="#TCP-x2F-IP-常见协议" class="headerlink" title="TCP&#x2F;IP 常见协议"></a>TCP&#x2F;IP 常见协议</h3><ul>
+<li>TCP&#x2F;IP协议栈定义了一系列的标准协议</li>
+</ul>
+<p><img src="/images/HCIA02/network_protocol.png" alt="image"></p>
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        supplementary
+    </div>
+    <div class='spoiler-content'>
+        <ul>
+<li><p>应用层协议</p>
+<ul>
+<li>Telent<ul>
+<li>提供远程管理服务</li>
+<li>经常用于测试网络及端口占用情况</li>
+<li>TCP端口 23</li>
+</ul>
+</li>
+<li>FTP<ul>
+<li>File Transfer Protocol，文件传输协议</li>
+<li>提供互联网文件资源共享服务</li>
+<li>用于在网络上进行文件传输的一套标准协议</li>
+<li>TCP端口 20 ：FTP数据端口</li>
+<li>TCP端口 21：FTP连接端口</li>
+</ul>
+</li>
+<li>TFTP<ul>
+<li>Trivial File Transfer Protocol,简单文件传输协议</li>
+<li>提供简单的文件传输服务</li>
+<li>是TCP&#x2F;IP协议族中的一个用来在客户机与服务器之间进行简单文件传输的协议</li>
+<li>提供不复杂、开销不大的文件传输服务。</li>
+<li>TCP端口号为69</li>
+</ul>
+</li>
+<li>SNMP<ul>
+<li>Simple Network Management Protocol，简单网络管理协议</li>
+<li>原来名字叫做简单网关监控协议（Simple Gateway Monitoring Protocol-SGMP）</li>
+<li>SNMP管理协议不光能够加强网络管理系统的效能，而且还可以用来对网络中的资源进行管理和实时监控</li>
+<li>SNMP 是专门设计用于在 IP 网络管理网络节点（服务器、工作站、路由器、交换机及HUBS等）的一种标准协议</li>
+<li>TCP端口 161</li>
+<li>UDP端口 161</li>
+</ul>
+</li>
+<li>HTTP<ul>
+<li>Hyper Text Transfer Protocol，超文本传输协议</li>
+<li>提供浏览网页服务</li>
+<li>简单的请求-响应协议，它通常运行在TCP之上。</li>
+<li>它指定了客户端可能发送给服务器什么样的消息以及得到什么样的响应。</li>
+<li>TCP端口 80</li>
+</ul>
+</li>
+<li>SMTP<ul>
+<li>Simple Mail Transfer Protocol，简单邮件传输协议</li>
+<li>SMTP是一种提供可靠且有效的电子邮件传输的协议</li>
+<li>提供互联网电子邮件服务</li>
+<li>SMTP是建立在FTP文件传输服务上的一种邮件服务，主要用于系统之间的邮件信息传递，并提供有关来信的通知</li>
+<li>TCP端口号 25</li>
+</ul>
+</li>
+<li>DNS<ul>
+<li>Domain Name System，域名系统</li>
+<li>DNS是Internet上解决网上机器命名的一种系统</li>
+<li>它作为将域名和IP地址相互映射的一个分布式数据库，能够使人更方便地访问互联网</li>
+<li>UDP端口53</li>
+</ul>
+</li>
+<li>DHCP<ul>
+<li>Dynamic Host Configuration Protocol，动态主机配置协议</li>
+<li>DHCP是一个局域网的网络协议</li>
+<li>指的是由服务器控制一段IP地址范围，客户机登录服务器时就可以自动获得服务器分配的IP地址和子网掩码</li>
+<li>通常被应用在大型的局域网络环境中</li>
+<li>UDP端口67</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>传输层协议</p>
+<ul>
+<li>TCP<ul>
+<li>Transmission Control Protocol，传输控制协议</li>
+<li>TCP是一种面向连接的、可靠的、基于字节流的传输层通信协议</li>
+<li>TCP是为了在不可靠的互联网络上提供可靠的端到端字节流而专门设计的一个传输协议</li>
+<li>数据格式：字节流</li>
+<li>服务：由套接字端点获得</li>
+</ul>
+</li>
+<li>UDP<ul>
+<li>User Datagram Protocol，用户数据报协议</li>
+<li>UDP 为应用程序提供了一种无需建立连接就可以发送封装的 IP 数据包的方法</li>
+<li>提供面向事务的简单不可靠信息传送服务</li>
+<li>特点：无连接、不可靠、快速传输</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>网络层的协议</p>
+<ul>
+<li>ICMP<ul>
+<li>Internet Control Message Protocol，Internet控制报文协议</li>
+<li>它是TCP&#x2F;IP协议簇的一个子协议，用于在IP主机、路由器之间传递控制消息</li>
+<li>ICMP协议是一种面向无连接的协议，用于传输出错报告控制信息</li>
+<li>归属于网络层协议，类型为控制报文协议</li>
+<li>作用：在主机与路由器之间传递控制信息</li>
+<li>功能<ul>
+<li>Ping 检查连通性</li>
+<li>tracert 查询路由路径</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>IGMP</li>
+<li>IP</li>
+</ul>
+</li>
+<li><p>数据链路层协议</p>
+<ul>
+<li>Ethernet 以太网</li>
+<li>PPP 点到点</li>
+<li>PPPoE 以太网到点到点的转换</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+
+<hr>
+<ul>
+<li>常见协议标准化组织<ul>
+<li>IETF</li>
+<li>IEEE</li>
+<li>ISO</li>
+</ul>
+</li>
+</ul>
+<h2 id="应用层"><a href="#应用层" class="headerlink" title="应用层"></a>应用层</h2><ul>
+<li>应用层为应用软件提供接口，使应用程序能够使用网络服务。</li>
+<li>应用层的PDU被称为Data（数据）。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>应用层协议</th>
+<th>端口号</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>HTTP</td>
+<td>80</td>
+<td>（TCP）</td>
+<td>超文本传输协议，提供浏览网页服务</td>
+</tr>
+<tr>
+<td>Telnet</td>
+<td>23</td>
+<td>（TCP）</td>
+<td>远程登陆协议，提供远程管理服务</td>
+</tr>
+<tr>
+<td>FTP</td>
+<td>20、21</td>
+<td>（TCP）</td>
+<td>文本传输协议，提供互联网文件资源共享服务</td>
+</tr>
+<tr>
+<td>SMTP</td>
+<td>25</td>
+<td>（TCP）</td>
+<td>简单邮件传输协议，提供互联网电子邮件服务</td>
+</tr>
+<tr>
+<td>TFTP</td>
+<td>69</td>
+<td>（UDP）</td>
+<td>简单文件传输协议，提供简单的文件传输服务</td>
+</tr>
+</tbody></table>
+<ul>
+<li>ssh协议，TCP 22，相当于是telent版本，更加安全</li>
+</ul>
+<h2 id="传输层协议"><a href="#传输层协议" class="headerlink" title="传输层协议"></a>传输层协议</h2><ul>
+<li>传输层协议接收来自应用层协议的数据，封装上相应的传输层头部，帮助其建立“端到端”（Port to Port）的连接。</li>
+<li>传输层的PDU被称为Segment（段）。</li>
+</ul>
+<h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><ol>
+<li>TCP：<ol>
+<li>Transmission Control Protocol</li>
+<li>一种面向连接的、可靠的传输层通信协议</li>
+</ol>
+</li>
+<li>UDP：<ol>
+<li>User Datagram Protocol</li>
+<li>一种简单的面向无连接的、不可靠的传输层协议</li>
+</ol>
+</li>
+</ol>
+<h3 id="TCP报文格式"><a href="#TCP报文格式" class="headerlink" title="TCP报文格式"></a>TCP报文格式</h3><p><img src="/images/HCIA02/TCP.png" alt="image"></p>
+<ul>
+<li>tcp报文特点：<ul>
+<li>TCP头部固定为20字节，格式也是固定。</li>
+<li>但是实际的tcp报头 ≥ 20字节，因为tcp报头&#x3D;tcp头部+扩展信息option 。</li>
+</ul>
+</li>
+</ul>
+<h4 id="TCP报头字段（20-Byte）"><a href="#TCP报头字段（20-Byte）" class="headerlink" title="TCP报头字段（20 Byte）"></a>TCP报头字段（20 Byte）</h4><ol>
+<li>source port (16bit)：源目端口号，标识发送者应用</li>
+<li>destination port (16bit)：目的端口号，标识接收者应用</li>
+<li>sequence nmber (32bit)：seq ，序列号，用于保证数据传递的可靠性和有序性</li>
+<li>acknowledgement number (32bit)：ack number（ACK）确认序列号，用于回复前面的序列号。<ol>
+<li>用于确认已经收到前面序列号对应的报文</li>
+<li>用于告知对端下次发送的报文序列号</li>
+</ol>
+</li>
+<li>header Length (4bit)：报头长度，指的是封装的tcp报头长度，大于等于20字节</li>
+<li>reserved (6bit)：保留位，填充为0</li>
+<li>control (6bit)：控制位，有6bit，常用其中4个bit，分别为ack、rst、syn、fin<ol>
+<li>ack：确认序列号有效位，当ack&#x3D;1时，确认序列号才有效</li>
+<li>rst：重置位，当rst&#x3D;1时，代表tcp断开重新连接</li>
+<li>syn：初始化置位，当syn&#x3D;1时代表tcp刚开始连接</li>
+<li>fin：拆链位，当fin&#x3D;1时tcp断开连接</li>
+</ol>
+</li>
+<li>Windows (16bit)：滑动窗口，与流量控制机制有关</li>
+<li>checksum (16bit)：检验和，用于检验报文的完整性</li>
+<li>urgent (16bit)：指针</li>
+</ol>
+<ul>
+<li>TCP的应用场景：文本、图片、邮件进行数据传输</li>
+</ul>
+<h3 id="UDP报头字段-8-Byte"><a href="#UDP报头字段-8-Byte" class="headerlink" title="UDP报头字段(8 Byte)"></a>UDP报头字段(8 Byte)</h3><p><img src="/images/HCIA02/UDP.png" alt="image"></p>
+<ul>
+<li>头部固定8字节，格式固定，没有安全保障机制</li>
+</ul>
+<h4 id="报文字段"><a href="#报文字段" class="headerlink" title="报文字段"></a>报文字段</h4><ol>
+<li>Source port (16bit): 源端口号</li>
+<li>Destination port (16): 目的端口号</li>
+<li>Length (16)：报头长度，UDP报头长度（报头&#x3D;udp头部+扩展字段）</li>
+<li>Checksum (16)：校验和，用于检验报文的完整性</li>
+</ol>
+<ul>
+<li><p>应用场景：音频、视频</p>
+</li>
+<li><p>总结（TCP和UDP比较）：TCP的安全性更高，UDP的传输速度更快</p>
+</li>
+<li><p>海带丝（HedEx_Lite）工具</p>
+</li>
+</ul>
+<h3 id="端口号"><a href="#端口号" class="headerlink" title="端口号"></a>端口号</h3><ul>
+<li>用于标识上层协议<ul>
+<li>范围：0-65535<ul>
+<li>其中0 ~ 1023为知名端口号（常用的端口）</li>
+<li>1024 ~ 65535为非知名端口号（不常用）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="TCP的保障机制"><a href="#TCP的保障机制" class="headerlink" title="TCP的保障机制"></a>TCP的保障机制</h3><ul>
+<li>前、中、后</li>
+</ul>
+<h4 id="传输前：三次握手"><a href="#传输前：三次握手" class="headerlink" title="传输前：三次握手"></a>传输前：三次握手</h4><p><img src="/images/HCIA02/TCP_Before.png" alt="image"></p>
+<ul>
+<li>双方交互三次报文，建立TCP连接</li>
+</ul>
+<h4 id="传输中：确认机制以及重传机制"><a href="#传输中：确认机制以及重传机制" class="headerlink" title="传输中：确认机制以及重传机制"></a>传输中：确认机制以及重传机制</h4><div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        TCP_transmitting
+    </div>
+    <div class='spoiler-content'>
+        <ul>
+<li>TCP连接已经建立，进行数据传输过程</li>
+<li><strong>PC1—-发送数据—-&gt;PC2</strong><ul>
+<li>seq &#x3D; 201, ack number &#x3D; 201</li>
+<li>syn &#x3D; 0, ack &#x3D; 1, rst &#x3D; 0, fin &#x3D; 0</li>
+<li>100 byte</li>
+</ul>
+</li>
+<li><strong>PC1&lt;—-确认收到—-PC2</strong><ul>
+<li>seq &#x3D; 201 , ack number &#x3D; 301+1&#x3D;302</li>
+<li>syn &#x3D; 0, ack &#x3D; 1, rst &#x3D; 0, fin &#x3D;0</li>
+<li>0 byte</li>
+</ul>
+</li>
+<li><strong>PC1—-发送数据—-&gt;PC2</strong><ul>
+<li>seq &#x3D; 302 ， ack number &#x3D; 201</li>
+<li>syn &#x3D; 0, ack &#x3D; 1, rst &#x3D; 0, fin &#x3D; 0</li>
+<li>500 byte</li>
+<li><strong>实际丢包了！！</strong></li>
+</ul>
+</li>
+<li><strong>PC1&lt;—-重复上一条确认报文—-PC2</strong> （PC没收到新数据，开始催）<ul>
+<li>seq &#x3D; 201，ack number &#x3D; 302</li>
+<li>syn &#x3D; 0, ack &#x3D; 1, rst &#x3D; 0, fin &#x3D; 0</li>
+<li>重复发送上一条确认报文报文（表示自己没收到新到数据）</li>
+</ul>
+</li>
+<li><strong>PC1—-重新发送—-&gt;PC2</strong><ul>
+<li>seq &#x3D; 302 ， ack number &#x3D; 201</li>
+<li>syn &#x3D; 0, ack &#x3D; 1, rst &#x3D; 0, fin &#x3D; 0</li>
+<li>500 byte</li>
+</ul>
+</li>
+<li><strong>PC1&lt;—-确认收到—-PC2</strong><ul>
+<li>seq &#x3D; 203, ack number &#x3D; 803 </li>
+<li>syn &#x3D; 0, ack &#x3D; 1, rst &#x3D; 0, fin &#x3D; 0</li>
+<li>0 byte</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+
+<p><img src="/images/HCIA02/TCP_transmitting.png" alt="image"></p>
+<ul>
+<li>PC发送数据后，经过一段时间没有收到对端设备的回复报文，就会进行重传，而PC每一次发送报文只有在得到回复之后才会发送新的报文。</li>
+</ul>
+<h4 id="传输后：四次挥手"><a href="#传输后：四次挥手" class="headerlink" title="传输后：四次挥手"></a>传输后：四次挥手</h4><p>TCP_After</p>
+<ul>
+<li><p>双方交互四次报文，断开TCP连接</p>
+</li>
+<li><p>断开TCP连接过程</p>
+</li>
+<li><p>PC1&lt;—-TCP连接已建立—-&gt;PC2</p>
+</li>
+<li><p>PC1&lt;—-TCP报文交互——&gt;PC2</p>
+</li>
+<li><p>数据传输完成，开始断开TPC连接（四次挥手）</p>
+</li>
+</ul>
+<ol>
+<li><strong>PC1———-&gt;PC2， 向PC2发送FIN 请求断开连接</strong><ul>
+<li>seq &#x3D; 803, ack number &#x3D; 204</li>
+<li>syn &#x3D;0, ack &#x3D; 1, rst &#x3D; 0, fin &#x3D;1</li>
+<li>0 byte</li>
+</ul>
+</li>
+<li><strong>PC1&lt;———-PC2 ， 发送ACK，确认收到FIN断开连接消息</strong><ul>
+<li>seq &#x3D; 204 , ack number &#x3D; 804</li>
+<li>syn &#x3D; 0, ack &#x3D;1 ,rst &#x3D; 0, fin &#x3D; 0</li>
+</ul>
+</li>
+<li><strong>PC1&lt;———-PC2 ， 向PC1发送FIN，请求断开连接</strong><ul>
+<li>seq &#x3D; 204 , ack number &#x3D; 804</li>
+<li>syn &#x3D; 0, ack &#x3D;1 , rst &#x3D; 0, fin &#x3D; 1</li>
+</ul>
+</li>
+<li><strong>PC1———-&gt;PC2， 发送ACK，确认收到FIN断开连接消息</strong><ul>
+<li>seq &#x3D; 804, ack number &#x3D; 205</li>
+<li>syn &#x3D; 0, ack &#x3D;1 , rst &#x3D; 0, fin &#x3D; 0</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h2><h3 id="MAC地址"><a href="#MAC地址" class="headerlink" title="MAC地址"></a>MAC地址</h3><ul>
+<li><p>MAC地址</p>
+<ul>
+<li>MAC地址分类：单播、组播和广播<ol>
+<li>单播：实现一对一通信，第8bit为0</li>
+<li>组播：实现一对多通信，第8bit为1</li>
+<li>广播：实现一对所有通信，所有bit为1，即 FF-FF-FF-FF-FF-FF</li>
+</ol>
+</li>
+<li>MAC地址组成：48bit，16进制表示<ul>
+<li>前面 24bit 为厂商标识</li>
+<li>后面 24bit 为网卡产品的编号标识</li>
+<li>华为 0x00E0FC</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>广播和广播域</p>
+<ol>
+<li>广播：主机发送的报文会传递给其他所有主机，也就是一对所有通信</li>
+<li>广播域：广播所能到达的范围<ul>
+<li>以太网中，一个广播域代表一个网段</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="ARP协议"><a href="#ARP协议" class="headerlink" title="ARP协议"></a>ARP协议</h3><ol>
+<li><p>ARP协议：</p>
+<ul>
+<li>Address Resolution Protocol，地址解析协议</li>
+<li>作用：基于目的IP地址解析出目的MAC地址</li>
+<li>在第一次通信时使用以获得对方MAC地址（就是最开始丢的那两个包）</li>
+</ul>
+</li>
+<li><p>ARP缓存表：用于记录IP地址和MAC地址的关系</p>
+<ul>
+<li>静态：管理员手工配置，永不老化</li>
+<li>动态：基于ARP协议学习到，老化时间1200S</li>
+<li><code>arp -a # 查看arp缓存表信息</code></li>
+</ul>
+</li>
+<li><p>ARP地址解析协议实现过程：</p>
+<ol>
+<li>PC1：发送ARP请求报文，通过广播发送，请求报文字段中的目的MAC填充为全0，目的IP为需要请求的MAC地址对应主机的IP地址</li>
+<li>PC2：收到ARP请求报文后，先将PC1的ARP映射关系写入自己的ARP缓存表，然后单播回复ARP响应报文，其中包含PC2自己的ARP映射关系以及PC1的ARP映射关系</li>
+<li>PC1：收到ARP响应报文后，将PC2的ARP映射关系写入自己的ARP缓存表</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li>PC1发个ARP请求报文、PC2回复个响应报文</li>
+<li>Host 1 ARP缓存–&gt;Host1发送ARP请求（广播）—&gt;Host 2 ARP缓存–&gt; Host2 ARP响应（单播）–&gt;Host 1 ARP缓存</li>
+</ul>
+<hr>
+<h2 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h2><ul>
+<li><p>物理层作用&#x2F;功能：将数据帧转换为比特流，通过传输介质将比特流传输到对端的设备</p>
+</li>
+<li><p>数据到达物理层之后，物理层会根据物理介质的不同，将数字信号转换成光信号、电信号或者是电磁波信号。</p>
+</li>
+<li><p>物理层的PDU被称为比特流（Bitstream）。</p>
+</li>
+</ul>
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        supplement
+    </div>
+    <div class='spoiler-content'>
+        <ul>
+<li>物理层位于模型的最底层：<ul>
+<li>负责比特流在介质上的传输。</li>
+<li>规范了线缆、针脚、电压、接口等物理特性规范。</li>
+<li>常见的传输介质有：双绞线、光纤、电磁波等。</li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</div>
+
+<h3 id="传输介质"><a href="#传输介质" class="headerlink" title="传输介质"></a>传输介质</h3><ol>
+<li>双绞线：由8根线缆两两交缠形成4对双绞线，使用时需要通过RJ45连接器，对线序有要求。<ol>
+<li>按屏蔽能力划分：屏蔽双绞线和非屏蔽双绞线</li>
+<li>按传输速率划分：3类、4类、5类（5e）、6类、7类、8类等</li>
+</ol>
+</li>
+<li>光纤：由玻璃纤维制成，利用光信号的全反射原理进行传输，需要搭配光模块使用<ul>
+<li>光纤的分类：<ol>
+<li>单模光纤：黄色外皮，同一个时刻只能传输一个波长的信号，<ul>
+<li>需要有专门的激光设备发送光信号，使用成本较高，适用于远距离传输，最大传输距离达150KM。</li>
+</ul>
+</li>
+<li>多模光纤：橙色外皮，同一个时刻可以传输多个波长的信号，<ul>
+<li>无需专门激光设备，使用成本较低，</li>
+<li>但是随着传输距离的增加会造成色散影响数据传输，最大传输距离达5KM。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>同异步串口线缆：早期服务器的接入调试使用，传输速率太低。<ul>
+<li>V.24 最大传输速率64k；V.35最大传输速率2M</li>
+</ul>
+</li>
+<li>无线电波：通过不同WiFi版本会有不同的传输速率</li>
+</ol>
+<h2 id="数据通信过程"><a href="#数据通信过程" class="headerlink" title="数据通信过程"></a>数据通信过程</h2><h3 id="发送方数据封装"><a href="#发送方数据封装" class="headerlink" title="发送方数据封装"></a>发送方数据封装</h3><p><img src="/images/HCIA02/packaging.png" alt="image"></p>
+<h3 id="中间网络数据传输"><a href="#中间网络数据传输" class="headerlink" title="中间网络数据传输"></a>中间网络数据传输</h3><p><img src="/images/HCIA02/transmitting.png" alt="image"></p>
+<h3 id="接收方数据解封装"><a href="#接收方数据解封装" class="headerlink" title="接收方数据解封装"></a>接收方数据解封装</h3><p><img src="/images/HCIA02/unpacking.png" alt="image"></p>
+<h2 id="The-end"><a href="#The-end" class="headerlink" title="The end"></a>The end</h2><p>2022&#x2F;09&#x2F;27 edit.</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+        </div>
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/09/27/problems/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">problems</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Isshin</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Objectives"><span class="nav-number">2.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%92%8C%E6%95%B0%E6%8D%AE"><span class="nav-number">3.</span> <span class="nav-text">应用和数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">参考模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%BC%8F"><span class="nav-number">4.1.</span> <span class="nav-text">OSI七层模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP-x2F-IP-%E5%B8%B8%E8%A7%81%E5%8D%8F%E8%AE%AE"><span class="nav-number">4.2.</span> <span class="nav-text">TCP&#x2F;IP 常见协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%94%E7%94%A8%E5%B1%82"><span class="nav-number">5.</span> <span class="nav-text">应用层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE"><span class="nav-number">6.</span> <span class="nav-text">传输层协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E7%B1%BB"><span class="nav-number">6.1.</span> <span class="nav-text">分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F"><span class="nav-number">6.2.</span> <span class="nav-text">TCP报文格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP%E6%8A%A5%E5%A4%B4%E5%AD%97%E6%AE%B5%EF%BC%8820-Byte%EF%BC%89"><span class="nav-number">6.2.1.</span> <span class="nav-text">TCP报头字段（20 Byte）</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP%E6%8A%A5%E5%A4%B4%E5%AD%97%E6%AE%B5-8-Byte"><span class="nav-number">6.3.</span> <span class="nav-text">UDP报头字段(8 Byte)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%8A%A5%E6%96%87%E5%AD%97%E6%AE%B5"><span class="nav-number">6.3.1.</span> <span class="nav-text">报文字段</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AB%AF%E5%8F%A3%E5%8F%B7"><span class="nav-number">6.4.</span> <span class="nav-text">端口号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP%E7%9A%84%E4%BF%9D%E9%9A%9C%E6%9C%BA%E5%88%B6"><span class="nav-number">6.5.</span> <span class="nav-text">TCP的保障机制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E5%89%8D%EF%BC%9A%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B"><span class="nav-number">6.5.1.</span> <span class="nav-text">传输前：三次握手</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E4%B8%AD%EF%BC%9A%E7%A1%AE%E8%AE%A4%E6%9C%BA%E5%88%B6%E4%BB%A5%E5%8F%8A%E9%87%8D%E4%BC%A0%E6%9C%BA%E5%88%B6"><span class="nav-number">6.5.2.</span> <span class="nav-text">传输中：确认机制以及重传机制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E5%90%8E%EF%BC%9A%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B"><span class="nav-number">6.5.3.</span> <span class="nav-text">传输后：四次挥手</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82"><span class="nav-number">7.</span> <span class="nav-text">数据链路层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MAC%E5%9C%B0%E5%9D%80"><span class="nav-number">7.1.</span> <span class="nav-text">MAC地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARP%E5%8D%8F%E8%AE%AE"><span class="nav-number">7.2.</span> <span class="nav-text">ARP协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%89%A9%E7%90%86%E5%B1%82"><span class="nav-number">8.</span> <span class="nav-text">物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E8%BE%93%E4%BB%8B%E8%B4%A8"><span class="nav-number">8.1.</span> <span class="nav-text">传输介质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B"><span class="nav-number">9.</span> <span class="nav-text">数据通信过程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E9%80%81%E6%96%B9%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85"><span class="nav-number">9.1.</span> <span class="nav-text">发送方数据封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%AD%E9%97%B4%E7%BD%91%E7%BB%9C%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93"><span class="nav-number">9.2.</span> <span class="nav-text">中间网络数据传输</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8E%A5%E6%94%B6%E6%96%B9%E6%95%B0%E6%8D%AE%E8%A7%A3%E5%B0%81%E8%A3%85"><span class="nav-number">9.3.</span> <span class="nav-text">接收方数据解封装</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-end"><span class="nav-number">10.</span> <span class="nav-text">The end</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
