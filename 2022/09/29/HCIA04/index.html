@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Isshin">
+    
+    <title>
+        
+            HCIA04 |
+        
+        Isshin&#39;blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="/images/logo.svg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#0066CC","avatar":"/images/avatar.svg","favicon":"/images/logo.svg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Keep writing and Keep loving."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":true}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":false},"version":"3.4.5"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Isshin&#39;blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">HCIA04</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="/images/avatar.svg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">Isshin</span>
+                        
+                            <span class="author-label">Lv1</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;
+        <span class="pc">2022-09-29 13:04:58</span>
+        <span class="mobile">2022-09-29 13:04</span>
+    </span>
+    
+    
+
+    
+    
+        <span class="article-wordcount article-meta-item">
+            <i class="fas fa-file-word"></i>&nbsp;<span>3.7k 字</span>
+        </span>
+    
+    
+        <span class="article-min2read article-meta-item">
+            <i class="fas fa-clock"></i>&nbsp;<span>13 分钟</span>
+        </span>
+    
+    
+        <span class="article-pv article-meta-item">
+            <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+        </span>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <p>HCIA 04 网络层协议及IP编址</p>
+<span id="more"></span>
+<h2 id="Foreword"><a href="#Foreword" class="headerlink" title="Foreword"></a>Foreword</h2><ul>
+<li>IPv4 (Internet Protocol Version 4)协议族是TCP&#x2F;IP协议族中最为核心的协议族。</li>
+<li>它工作在TCP&#x2F;IP协议栈的网络层，该层与OSI参考模型的网络层相对应。</li>
+<li>网络层提供了无连接数据传输服务，即网络在发送数据报文时不需要先建立连接，每一个IP数据报文独立发送。<br/></li>
+<li>介绍IPv4地址的基本概念，介绍如何进行子网划分，并且会介绍网络IP地址规划和IP地址的基本配置。</li>
+</ul>
+<hr>
+<h2 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h2><ul>
+<li>描述网络层的主要协议</li>
+<li>描述IPv4地址的概念、分类及特殊IP地址</li>
+<li>计算IP网络以及IP子网</li>
+<li>掌握IP网络地址规划方式</li>
+</ul>
+<hr>
+<h2 id="IP协议"><a href="#IP协议" class="headerlink" title="IP协议"></a>IP协议</h2><ul>
+<li>IP<ul>
+<li>Internet Protocol的缩写</li>
+<li>Internet Protocol本身是一个协议文件的名称<ul>
+<li>该协议文件的内容非常少，主要是定义并阐述了IP报文的格式</li>
+</ul>
+</li>
+<li>经常被提及的IP，一般不是特指Internet Protocol这个协议文件本身<ul>
+<li>而是泛指直接或间接与IP协议相关的任何内容</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>作用：<ol>
+<li>为网络层设备提供逻辑地址（IP地址）</li>
+<li>负责<strong>数据包</strong>的寻址和转发<ul>
+<li>网络层的PDU被称为<code>数据包</code></li>
+</ul>
+</li>
+</ol>
+</li>
+<li>版本:IPv4(IP Version 4)和IPv6(IP Version 6)</li>
+</ol>
+<hr>
+<h2 id="IPv4报文格式"><a href="#IPv4报文格式" class="headerlink" title="IPv4报文格式"></a>IPv4报文格式</h2><p><img src="/images/HCIA04/IPv4-Packet-Format.png" alt="image"></p>
+<details> <summary>IPv4-Packet-Format</summary>
+<br/>
+
+<hr>
+<ul>
+<li>IP Packet（IP数据包），其包头主要内容如下：<ul>
+<li>Version：4 bit，4：表示为IPv4；6：表示为IPv6。</li>
+<li>Header Length：4 bit，首部长度，如果不带Option字段，则为20，最长为60。</li>
+<li>Type of Service：8 bit，服务类型。只有在有QoS差分服务要求时，这个字段才起作用。</li>
+<li>Total Length：16 bit，总长度，整个IP数据包的长度。</li>
+<li>Identification：16 bit，标识，分片重组时会用到该字段。</li>
+<li>Flags：3 bit，标志位。</li>
+<li>Fragment Offset：12 bit，片偏移，分片重组时会用到该字段。</li>
+<li>Time to Live：8 bit，生存时间。</li>
+<li>Protocol：8 bit，协议：下一层协议。指出此数据包携带的数据使用何种协议，以便目的主机的IP层将数据部分上交给哪个进程处理。<ul>
+<li>Protocol常见值：<ul>
+<li>1: ICMP, Internet Control Message；</li>
+<li>2: IGMP, Internet Group Management；</li>
+<li>6: TCP , Transmission Control Protocol；</li>
+<li>17: UDP, User Datagram Protocol。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Header Checksum：16 bit，首部检验和。</li>
+<li>Source IP Address：32 bit，源IP地址。</li>
+<li>Destination IP Address：32 bit，目的IP地址。</li>
+<li>Options：可变，选项字段。</li>
+<li>Padding：可变，填充字段，全填0。</li>
+</ul>
+</li>
+</ul>
+<hr>
+</details>
+<br/>
+
+<ol>
+<li><p>报文基本信息（第一行）</p>
+<ol>
+<li>version：版本,v4或v6</li>
+<li>header length：头部长度，指的是整个IP报头的长度，大小为20-60字节<ul>
+<li>（头部长度&#x3D;固定长度+可选长度）</li>
+</ul>
+</li>
+<li>type of service：服务类型，在QoS中才有作用</li>
+<li>total length：总长度，包括IP报头和数据段（总长度&#x3D;IP报头+TCP&#x2F;UDP报头+数据载荷）</li>
+</ol>
+</li>
+<li><p>分片信息（第二行）</p>
+<ol>
+<li>分片ID：分片标识符，当分片标识符一致则表示是同一个数据的不同分片</li>
+<li>flags：标志位，里面包含DF（0表示可以分片，1表示不可以分片）和MF（0表示最后一个分片，1表示不是最后一个分片）</li>
+<li>分片偏移量：用于重组时定位分片原本所在的位置，保证接收设备可以正确的还原数据</li>
+</ol>
+</li>
+<li><p>路由转发信息（第三行）</p>
+<ol>
+<li>TTL：生存时间，数值默认为255，每经过一台三层设备该数值为减1，当设备收到TTL&#x3D;0的报文时会丢弃并且回复一个ICMP错误报告给源IP设备，告知该报文因TTL&#x3D;0而被丢弃</li>
+<li>protocol：协议，用于标识网络层协议或上层协议（ICMP：1；IGMP：2；TCP：6；UDP：17）</li>
+<li>header checksum：头部校验和，用于检验报文的完整性，防止数据丢失或被篡改</li>
+<li>源IP地址：发送者的IP地址</li>
+<li>目的IP地址：接收者的IP地址</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="IPv4地址"><a href="#IPv4地址" class="headerlink" title="IPv4地址"></a>IPv4地址</h2><ol>
+<li>一个IPv4地址的长度为：32bit</li>
+<li>IPv4地址通常的表示方法：点分十进制</li>
+<li>数制转换：<ol>
+<li>二进制转为十进制（8421法）<ol>
+<li>在二进制的情况下，每8bit去进行转换，表示为2的0-7次方，也就是1、2、4、8、16、32、64、128，如果该位置的二进制为1则取对应的数值，如果是0则不取。</li>
+<li>十进制转为二进制</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<p><img src="/images/HCIA04/binary-to-decimal.png" alt="image"></p>
+<ol start="4">
+<li>IPv4地址范围：0.0.0.0-255.255.255.255</li>
+<li>IP地址构成：<ol>
+<li>网络部分（网络号）：用于表示一个网络（网络号相同则代表同一个网段）</li>
+<li>主机部分（主机号）：用于区分一个网络内部的不同主机</li>
+</ol>
+</li>
+</ol>
+<p><img src="/images/HCIA04/IP-Address-Composition.png" alt="image"></p>
+<details> <summary>supplement</summary>
+
+<hr>
+<ul>
+<li>IPv4地址由如下两部分组成：<ul>
+<li>网络部分 (网络号)：用来标识一个网络。<ul>
+<li>IP地址不能反映任何有关主机位置的地理信息，只能通过网络号码字段判断出主机属于哪个网络。</li>
+<li>对于网络号相同的设备，无论实际所处的物理位置如何，它们都是处在同一个网络中。</li>
+</ul>
+</li>
+<li>主机部分 (主机号)：用来区分一个网络内的不同主机。</li>
+</ul>
+</li>
+<li>网络掩码 (Netmask)，又称子网掩码 (Subnet Mask):<ul>
+<li>网络掩码为32 bit，与IP地址的位数一样，通常也以点分十进制数来表示。</li>
+<li>网络掩码不是一个IP地址，在二进制的表示上是一堆连续的1、后面接一堆连续的0。</li>
+<li>通常将网络掩码中1的个数称为这个网络掩码的长度。</li>
+<li>如：掩码0.0.0.0的长度是0，掩码252.0.0.0的长度是6。</li>
+<li>网络掩码一般与IP地址结合使用，其中值为1的比特对应IP地址中的网络位；值为0的比特对应IP地址中的主机位，以此来辅助我们识别一个IP地址中的网络位与主机位。</li>
+<li>即网络掩码中1的个数就是IP地址的网络号的位数，0的个数就是IP地址的主机号的位数。</li>
+</ul>
+</li>
+</ul>
+<hr>
+</details>
+<br/>
+
+<ol start="6">
+<li>子网掩码：<ol>
+<li>作用：用于区分IP地址中的网络部分和主机部分</li>
+<li>构成：由连续的1和连续的0构成，其中连续的1代表网络部分</li>
+<li>书写方式：点分十进制、以连续的1的位数表示</li>
+</ol>
+</li>
+<li>网络寻址<ol>
+<li>二层寻址：同个网段内的通信，直接通过IP地址寻找目的设备</li>
+<li>三层寻址：不同网段的通信，需要利用网关设备转发不同网络的报文</li>
+</ol>
+</li>
+</ol>
+<details> <summary>supplement</summary>
+
+<hr>
+<ul>
+<li>网络号用于表示主机所在的网络，类似于“XX省XX市XX区XX小区”的作用。</li>
+<li>主机号用于表示网络号所定义的网络范围内某个特定的主机接口，类似于门牌号“XX栋XX号”的作用。</li>
+<li>网络寻址：<ul>
+<li>二层网络寻址：可直接通过IP地址，找到对应的主机接口。</li>
+<li>三层网络寻址：利用网关转发来自不同网段之间的数据包。</li>
+</ul>
+</li>
+<li>网关：<ul>
+<li>报文转发过程中，首先需要确定转发路径以及通往目的网段的接口。如果目的主机与源主机不在同一网段，报文需要先转发到网关，然后通过网关将报文转发到目的网段。</li>
+<li>网关是指接收并处理本地网段主机发送的报文并转发到目的网段的设备。为实现此功能，网关必须知道目的网段的IP地址。网关设备上连接本地网段的接口地址即为该网段的网关地址。</li>
+</ul>
+</li>
+</ul>
+<hr>
+</details>
+<br/>
+
+<ol start="8">
+<li>IP地址分类（有类编址)：<ul>
+<li>A类：前1bit固定为0，默认掩码为8位，范围为0.0.0.0-127.255.255.255，用于主机</li>
+<li>B类：前2bit固定为10，默认掩码为16位，范围为128.0.0.0-191.255.255.255，用于主机</li>
+<li>C类：前3bit固定为110，默认掩码为24位，范围为192.0.0.0-223.255.255.255，用于主机</li>
+<li>D类：前4bit固定为1110，范围为224.0.0.0-239.255.255.255，用于组播</li>
+<li>E类：前4bit固定为1111，范围为240.0.0.0-255.255.255.255，用于科研</li>
+<li>通过是被IP地址第一个十进制数在哪一个范围就可以确认该IP地址属于哪一类IP地址。</li>
+</ul>
+</li>
+</ol>
+<p><img src="/images/HCIA04/IP-Address-Classification.png" alt="image"></p>
+<ol start="9">
+<li>IP地址类型：<ol>
+<li>网络地址：用于定义一个网络，该地址不可分配给主机使用（网络位不变，主机为全为0）</li>
+<li>广播地址：用于给一个网络中所有主机发送数据，该地址不可分配给主机使用（网络位不变，主机位全为1）</li>
+<li>可用地址：网络中除了网络地址和广播地址之外的其他地址，可以分配给主机使用<br> （一个网络中的可用地址数：2^N-2，N为该网络的主机位）</li>
+</ol>
+</li>
+</ol>
+<details> <summary>IP-Address-Type</summary>
+
+<p><img src="/images/HCIA04/IP-Address-Type.png" alt="image"></p>
+</details>
+<br/>
+
+<ul>
+<li>IP地址计算</li>
+</ul>
+<details> <summary>IP-Address-Calculation</summary>
+
+<p><img src="/images/HCIA04/IP-Address-Calculation.png" alt="image"></p>
+</details>
+<br/>
+
+<ol>
+<li>公网地址和私网地址<ol>
+<li>公网地址由IANA组织进行分配，国内用户获取公网IP地址需要向运营商购买，公网IP地址全网唯一</li>
+<li>私网地址：用于局域网内部，不同局域网之间的私网地址可以重复，在A\B\C三类地址中各自划分出一个范围作为私网IP地址。<ul>
+<li>A类：10.0.0.0-10.255.255.255</li>
+<li>B类：172.16.0.0-172.31.255.255</li>
+<li>C类：192.168.0.0-192.168.255.255</li>
+</ul>
+</li>
+</ol>
+</li>
+<li>特殊地址<ol>
+<li>有限广播地址：255.255.255.255，所有设备都会监听该地址</li>
+<li>任意地址：0.0.0.0，代表所有IP地址</li>
+<li>环回地址：127.0.0.0&#x2F;8，用于测试设备本身的软件系统</li>
+<li>本地链路地址：169.254.0.0&#x2F;24，当主机进行DHCP自动获取IP地址失败之后，就会使用本地链路地址作为临时地址</li>
+</ol>
+</li>
+</ol>
+<p><img src="/images/HCIA04/Special-IP-Address.png" alt="image"></p>
+<ul>
+<li>网络地址转换技术（NAT）技术<br/></li>
+<li>IPv4 vs IPv6</li>
+</ul>
+<p><img src="/images/HCIA04/IPv4-vs-IPv6.png" alt="image"></p>
+<hr>
+<h2 id="子网划分"><a href="#子网划分" class="headerlink" title="子网划分"></a>子网划分</h2><ul>
+<li>使用可变长子网掩码（无类编址），根据实际需求进行子网划分，在原本IP的基础上，网络位向主机位借位。<ol>
+<li>一个IP网段可以划分的子网数量：2^m，m为借位数</li>
+<li>一个IP网段的子网的可用IP地址数量：2^n-2（n为主机位数）</li>
+<li>子网的网络地址：子网的主机位全为0</li>
+<li>子网的广播地址：子网的主机位全为1</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h2 id="ICMP协议"><a href="#ICMP协议" class="headerlink" title="ICMP协议"></a>ICMP协议</h2><p><img src="/images/HCIA04/ICMP-message.png" alt="image"></p>
+<ol>
+<li><p>定义：IP协议的辅助协议，用于在网络设备中传递各种差错和控制信息。</p>
+<ul>
+<li>ICMP协议用来在网络设备间传递各种差错和控制信息，对于收集各种网络信息、诊断和排除各种网络故障等方面起着至关重要的作用</li>
+<li>ICMP消息封装在IP报文中，IP报文头部Protocol值为1时表示ICMP协议</li>
+<li><ul>
+<li>ICMP消息的格式取决于Type和Code字段，其中Type字段为消息类型，Code字段包含该消息类型的具体参数</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>报文格式：</p>
+<ol>
+<li>echo reply和request用于ping功能<ol>
+<li>type 0 ，Echo reply</li>
+<li>type 8 ，Echo request</li>
+</ol>
+</li>
+<li>type 3代表不可达类型（用于tracert功能）</li>
+<li>type 5用于重定向功能</li>
+<li>type 11用于TTL超时</li>
+</ol>
+</li>
+<li><p>作用：</p>
+<ol>
+<li>控制：ICMP重定向<ul>
+<li>当网络中某台设备发现接收报文和发送报文的端口是同一个时，就会触发ICMP重定向功能，发送出ICMP重定向报文，让访问的设备下一次直接走最优的路径。</li>
+<li>ICMP重定向功能默认关闭，因为安全性较低，可以手动开启。</li>
+</ul>
+</li>
+<li>ICMP差错检测：ping功能<ol>
+<li>作用：用于监测源目设备之间的网络连通性</li>
+<li>常用选项：<ol>
+<li><code>-a</code>：指定源IP</li>
+<li><code>-t</code>：一直不间断发送数据包</li>
+<li><code>-h</code>：指定TTL值，默认255</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>ICMP错误报告：tracert功能<ul>
+<li>通过不同的类型和代码的报文得到不同的错误报告，用于监测网络的故障点以及检测网络的路径。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<details><summary>Ping</summary>
+
+<hr>
+<ul>
+<li>Ping是检测网络连通性的常用工具，同时也能够收集其他相关信息。</li>
+<li>用户可以在Ping命令中指定不同参数，如ICMP报文长度、发送的ICMP报文个数、等待回复响应的超时时间等</li>
+<li>设备根据配置的参数来构造并发送ICMP报文，进行Ping测试</li>
+</ul>
+<hr>
+</details>
+
+<details><summary>Ping-options</summary>
+
+<p><img src="/images/HCIA04/Ping-options.png" alt="image"></p>
+</details>
+<br/>
+<details><summary>tracert的具体过程</summary>
+
+<hr>
+<ul>
+<li>Tracert基于报文头中的TTL值来逐跳跟踪报文的转发路径。</li>
+<li>为了跟踪到达某特定目的地址的路径，源端首先将报文的TTL值设置为1。</li>
+<li>该报文到达第一个节点后，TTL超时，于是该节点向源端发送TTL超时消息，消息中携带时间戳。然后源端将报文的TTL值设置为2，报文到达第二个节点后超时，该节点同样返回TTL超时消息，以此类推，直到报文到达目的地。</li>
+<li>这样，源端根据返回的报文中的信息可以跟踪到报文经过的每一个节点，并根据时间戳信息计算往返时间。</li>
+</ul>
+<hr>
+</details>
+
+<hr>
+<h2 id="IP地址的基础配置"><a href="#IP地址的基础配置" class="headerlink" title="IP地址的基础配置"></a>IP地址的基础配置</h2><ol>
+<li><p>物理接口视图配置<br><code>[AR1]int g0/0/0   ##进入物理接口</code><br><code>[AR1-GigabitEthernet0/0/0]ip address 192.168.1.254 24</code></p>
+</li>
+<li><p>逻辑接口视图配置<br><code>[Huawei]int Vlanif 1    ##进入逻辑接口</code><br><code>[Huawei-Vlanif1]ip address 192.168.1.254 24</code></p>
+</li>
+<li><p>环回接口视图配置<br><code>[Huawei]interface LoopBack 0  ##创建环回接口loopback0</code><br><code>[Huawei-LoopBack0]ip address 1.1.1.1 32</code></p>
+</li>
+</ol>
+<h3 id="网络IP地址规划"><a href="#网络IP地址规划" class="headerlink" title="网络IP地址规划"></a>网络IP地址规划</h3><ul>
+<li>IP地址规划要和网络结构、路由协议、流量规划、业务规则等结合起来考虑。</li>
+<li>IP地址的规划应尽可能和网络层次相对应，应该是自顶向下的一种规划</li>
+<li>总而言之，IP地址规划的目标是：易管理，易扩展，利用率高</li>
+</ul>
+<details><summary>规划原则</summary>
+
+<hr>
+<ul>
+<li>唯一性：一个IP网络中不能有两个主机采用相同的IP地址。</li>
+<li>连续性：连续地址在层次结构网络中易于进行路由汇总，大大缩减路由表，提高路由计算的效率、加速路由收敛。</li>
+<li>扩展性：地址分配在每一层次上都要有合理的预留，在网络规模扩展时能保证路由汇总所需的连续性。避免网络扩展造成的地址、路由重新规划。</li>
+<li>结构化、业务相关性：地址规划与网络拓扑结构和网络承载业务结合起来，便于路由规划和QoS部署。好的IP地址规划使得每个地址都具有实际含义，看到一个地址就可以大致判断出该地址所属的设备和对应的业务。</li>
+</ul>
+<hr>
+</details>
+
+<h2 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h2><ul>
+<li>只要在IP网络上，用户想要连接到Internet，就需要IP地址</li>
+</ul>
+<hr>
+<h2 id="The-end"><a href="#The-end" class="headerlink" title="The end"></a>The end</h2><p>2022&#x2F;09&#x2F;29 edit.</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+        </div>
+
+        
+
+        
+
+        
+            <div class="article-nav">
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2022/09/28/HCIA03/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">HCIA03</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2022</span>
+              -
+            
+            2022&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">Isshin</a>
+        </div>
+        
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        访问人数&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        总访问量&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.5</a>
+        </div>
+        
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="arrow-up fas fa-arrow-up"></i>
+                <span class="percent"></span>
+            </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Foreword"><span class="nav-number">1.</span> <span class="nav-text">Foreword</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Objectives"><span class="nav-number">2.</span> <span class="nav-text">Objectives</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.</span> <span class="nav-text">IP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPv4%E6%8A%A5%E6%96%87%E6%A0%BC%E5%BC%8F"><span class="nav-number">4.</span> <span class="nav-text">IPv4报文格式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IPv4%E5%9C%B0%E5%9D%80"><span class="nav-number">5.</span> <span class="nav-text">IPv4地址</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AD%90%E7%BD%91%E5%88%92%E5%88%86"><span class="nav-number">6.</span> <span class="nav-text">子网划分</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ICMP%E5%8D%8F%E8%AE%AE"><span class="nav-number">7.</span> <span class="nav-text">ICMP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IP%E5%9C%B0%E5%9D%80%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE"><span class="nav-number">8.</span> <span class="nav-text">IP地址的基础配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9CIP%E5%9C%B0%E5%9D%80%E8%A7%84%E5%88%92"><span class="nav-number">8.1.</span> <span class="nav-text">网络IP地址规划</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary"><span class="nav-number">9.</span> <span class="nav-text">Summary</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-end"><span class="nav-number">10.</span> <span class="nav-text">The end</span></a></li></ol>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
